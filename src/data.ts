@@ -107,21 +107,6 @@ export const projects: Project[] = [
     github: 'https://github.com/Thando-rgb/portfolio',
     live: 'https://thando-portfolio-swart.vercel.app/',
   },
-  {
-    id: 'foodfusion',
-    number: '06',
-    title: 'FoodFusion – Full-Stack Recipe Platform',
-    category: 'Web development',
-    discipline: 'ACADEMIC PROJECT',
-    year: 'Academic',
-    preview: 'portfolio',
-    description: 'A cooking website where users register, log in, add recipes and post reviews, with security controls throughout.',
-    stack: ['PHP', 'MySQL', 'JavaScript', 'CSS'],
-    challenge: 'Build a secure full-stack recipe platform with user registration, login, recipe submissions, reviews, and downloadable culinary resources.',
-    approach: 'Implemented bcrypt password hashing, session-specific CSRF protection, PDO prepared statements, output escaping, failed-login tracking, temporary lockouts, hardened session cookies, session identifier regeneration, MIME detection, file size restrictions, and randomly generated file names.',
-    outcome: 'Developed and tested core functionality including registration, login, password reset, recipe submissions, recipe search, user interactions, and downloadable culinary resources.',
-    features: ['User registration and login', 'Recipe submissions and reviews', 'Bcrypt password hashing and CSRF protection', 'Secure image-upload validation', 'Failed-login tracking and account lockouts'],
-  },
 ]
 
 export interface JourneyItem {
