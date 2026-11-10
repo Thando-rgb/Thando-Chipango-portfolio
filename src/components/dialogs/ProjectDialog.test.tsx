@@ -20,7 +20,7 @@ describe('ProjectDialog', () => {
     renderDialog()
     expect(screen.getByRole('dialog')).toBeInTheDocument()
     expect(screen.getByRole('heading', { level: 2, name: /network intrusion detection/i })).toBeInTheDocument()
-    expect(screen.getByText('02 / 05')).toBeInTheDocument()
+    expect(screen.getByText('02 / 06')).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'The challenge' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'The approach' })).toBeInTheDocument()
     expect(screen.getByRole('heading', { name: 'The outcome' })).toBeInTheDocument()

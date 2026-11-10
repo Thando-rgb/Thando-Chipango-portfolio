@@ -107,6 +107,21 @@ export const projects: Project[] = [
     github: 'https://github.com/Thando-rgb/portfolio',
     live: 'https://thando-portfolio-steel.vercel.app/',
   },
+  {
+    id: 'foodfusion',
+    number: '06',
+    title: 'FoodFusion – Full-Stack Recipe Platform',
+    category: 'Web development',
+    discipline: 'ACADEMIC PROJECT',
+    year: 'Academic',
+    preview: 'portfolio',
+    description: 'A cooking website where users register, log in, add recipes and post reviews, with security controls throughout.',
+    stack: ['PHP', 'MySQL', 'JavaScript', 'CSS'],
+    challenge: 'Build a secure full-stack recipe platform with user registration, login, recipe submissions, reviews, and downloadable culinary resources.',
+    approach: 'Implemented bcrypt password hashing, session-specific CSRF protection, PDO prepared statements, output escaping, failed-login tracking, temporary lockouts, hardened session cookies, session identifier regeneration, MIME detection, file size restrictions, and randomly generated file names.',
+    outcome: 'Developed and tested core functionality including registration, login, password reset, recipe submissions, recipe search, user interactions, and downloadable culinary resources.',
+    features: ['User registration and login', 'Recipe submissions and reviews', 'Bcrypt password hashing and CSRF protection', 'Secure image-upload validation', 'Failed-login tracking and account lockouts'],
+  },
 ]
 
 export interface JourneyItem {
@@ -159,12 +174,25 @@ export const experience: JourneyItem[] = [
       'Collaborated with an international team during live operations, coordinating accreditation, equipment, and laptop-based on-site logistics.',
     ],
   },
+  {
+    id: 'tn-farms-role',
+    period: '2020 – Present',
+    title: 'Assistant Farm Manager',
+    organisation: 'TN Farms',
+    type: 'FARM OPERATIONS',
+    details: [
+      'Support day-to-day management of farm operations covering poultry, pig production and crops.',
+      'Manage poultry operation involving approximately 100 chickens and supporting pig husbandry for a herd of four pigs introduced in late 2025.',
+      'Maintain farm records, monitor stock and assist with operational planning and resource management.',
+      'Supervise farm workers and coordinate daily tasks to support routine farm activities.',
+    ],
+  },
 ]
 
 export const education: JourneyItem[] = [
   {
     id: 'level-five',
-    period: 'EXPECTED 2027',
+    period: 'Expected 2028',
     title: 'Level 5 Diploma',
     organisation: 'Computing with Business Management',
     type: 'NACIT',
@@ -175,13 +203,13 @@ export const education: JourneyItem[] = [
   },
   {
     id: 'level-four',
-    period: '2025',
+    period: '2026',
     title: 'Level 4 Diploma',
     organisation: 'Computing with Business Management',
     type: 'NACIT',
     details: [
       'Completed at the National College of Information Technology.',
-      'Coursework: Frontend Web Development, Computer Networks, Databases, eBusiness, Understanding Business Organisations, and Essentials of Business Management.',
+      'Coursework: Frontend Web Development, Computer Networks, Databases, eBusiness, Understanding Business Organizations, Essentials of Business Management.',
     ],
   },
   {
@@ -200,7 +228,7 @@ export const education: JourneyItem[] = [
 export const skills = [
   { title: 'Languages', items: ['Python', 'JavaScript', 'HTML & CSS', 'SQL', 'PHP'] },
   { title: 'Frameworks', items: ['React', 'React Native', 'Next.js', 'Flask', 'Tailwind CSS'] },
-  { title: 'Data & Analytics', items: ['pandas', 'NLTK', 'scikit-learn', 'Jupyter', 'STATA', 'ODK', 'SurveyCTO', 'SQLite'] },
+  { title: 'Data & Analytics', items: ['pandas', 'NLTK', 'scikit-learn', 'Jupyter', 'STATA', 'REDCap', 'ODK', 'SurveyCTO', 'MySQL', 'SQLite'] },
   { title: 'Security & Networking', items: ['Scapy', 'Kali Linux', 'Network security', 'Networking', 'Technical audits'] },
   { title: 'Tools', items: ['Git', 'Linux', 'Node.js', 'MongoDB', 'VS Code', 'Playwright'] },
   { title: 'Mobile Development', items: ['Flutter', 'Swift'] },
