@@ -1,0 +1,19 @@
+{
+  "ci": {
+    "collect": {
+      "url": ["http://localhost:5173/"],
+      "numberOfRuns": 3,
+      "settings": {
+        "preset": "desktop",
+        "onlyAudits": ["first-contentful-paint", "largest-contentful-paint", "cumulative-layout-shift", "speed-index", "total-blocking-time"]
+      }
+    },
+    "assert": {
+      "assertions": {
+        "first-contentful-paint": ["error", { "maxNumericValue": 3000 }],
+        "largest-contentful-paint": ["error", { "maxNumericValue": 4000 }],
+        "cumulative-layout-shift": ["error", { "maxNumericValue": 0.1 }]
+      }
+    }
+  }
+}

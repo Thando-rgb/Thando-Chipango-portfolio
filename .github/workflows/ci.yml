@@ -15,7 +15,27 @@ jobs:
           node-version: 22
           cache: npm
       - run: npm ci
+      - run: npm audit --audit-level=moderate || true
       - run: npm run typecheck
       - run: npm run lint
       - run: npm run test
-      - run: npm run build
+      - run: npm install --save-dev @lhci/cli
+      - name: Build and run Lighthouse CI
+        run: |
+          npm run build
+          npx serve dist -l 5000 &
+          SERVE_PID=$!
+          sleep 5
+          npx lhci autorun --config=lighthouserc.json
+          LHCI_EXIT=$?
+          kill $SERVE_PID
+          exit $LHCI_EXIT
+      - name: E2E tests (Playwright)
+        run: |
+          npm run dev &
+          DEV_PID=$!
+          sleep 5
+          npx playwright test
+          PW_EXIT=$?
+          kill $DEV_PID
+          exit $PW_EXIT

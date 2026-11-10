@@ -14,7 +14,7 @@ const About: React.FC = () => {
             <a href="#experience" className="text-link">A little more about my journey <ArrowDown aria-hidden="true" size={16} /></a>
           </Reveal>
           <Reveal className="about-copy" delay={0.1}>
-            <p>I'm Thando, an IT student and developer from Lilongwe, Malawi. I care about technology that does something useful, not just something impressive.</p>
+            <p>I'm Thando, an IT student, Data Science enthusiast and developer from Lilongwe, Malawi. I care about technology that does something useful, not just something impressive.</p>
             <p>My work sits at the intersection of full-stack development, data analysis, and cybersecurity. I've cleaned and analysed over 66,000 records in Python and SQL, built a network intrusion detection system, and helped local farmers manage their flocks through a pilot web platform.</p>
             <p>Currently studying Computing with Business Management at NACIT, and always making room for the next good challenge.</p>
           </Reveal>
