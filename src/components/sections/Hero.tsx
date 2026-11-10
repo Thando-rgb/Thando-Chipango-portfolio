@@ -14,7 +14,7 @@ const Hero: React.FC = () => {
       <m.div className="hero-landscape" style={{ y: reducedMotion ? 0 : imageY }}>
         <picture>
           <source type="image/webp" srcSet="/images/malawi-landscape-992.webp 992w, /images/malawi-landscape.webp 1984w" sizes="100vw" />
-          <img src="/images/malawi-landscape.png" alt="A quiet, mist-filled landscape inspired by the Malawian highlands" width="1984" height="992" fetchPriority="high" />
+          <img src="/images/malawi-landscape.webp" alt="A quiet, mist-filled landscape inspired by the Malawian highlands" width="1984" height="992" fetchPriority="high" />
         </picture>
         <div className="hero-image-wash" />
       </m.div>
