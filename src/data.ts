@@ -105,7 +105,7 @@ export const projects: Project[] = [
     outcome: 'Shipped a responsive personal website on Vercel, bringing project work, experience, and direct contact avenues together in one place. The original version remains available to explore.',
     features: ['Framework-free, modular implementation', 'Responsive navigation and smooth scrolling', 'Live iframe project previews on hover', 'Accessible content structure and direct contact links'],
     github: 'https://github.com/Thando-rgb/portfolio',
-    live: 'https://thando-portfolio-steel.vercel.app/',
+    live: 'https://thando-portfolio-swart.vercel.app/',
   },
   {
     id: 'foodfusion',

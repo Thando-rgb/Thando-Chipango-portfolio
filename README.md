@@ -34,7 +34,7 @@ Regenerate image assets with `npm run generate:assets` (social preview card, fav
 
 ## Deploy
 
-The site is live at https://thando-portfolio-steel.vercel.app. That URL is set as the canonical URL, Open Graph tags, JSON-LD, `robots.txt`, and `sitemap.xml`. If the domain ever changes, update it in one pass and redeploy:
+The site is live at https://thando-portfolio-swart.vercel.app. That URL is set as the canonical URL, Open Graph tags, JSON-LD, `robots.txt`, and `sitemap.xml`. If the domain ever changes, update it in one pass and redeploy:
 
 ```sh
 npm run set:url -- https://your-app.vercel.app

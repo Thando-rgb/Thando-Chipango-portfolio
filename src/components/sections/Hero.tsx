@@ -44,8 +44,8 @@ const Hero: React.FC = () => {
               '@context': 'https://schema.org',
               '@type': 'Person',
               name: 'Thando Chipango',
-              url: 'https://thando-portfolio-steel.vercel.app/',
-              image: 'https://thando-portfolio-steel.vercel.app/images/og-card.jpg',
+              url: 'https://thando-portfolio-swart.vercel.app/',
+              image: 'https://thando-portfolio-swart.vercel.app/images/og-card.jpg',
               jobTitle: 'IT Student & Full-Stack Developer',
               worksFor: {
                 '@type': 'Organization',
