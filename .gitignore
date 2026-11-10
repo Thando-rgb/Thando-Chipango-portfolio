@@ -9,6 +9,6 @@ coverage/
 test-output.txt
 .DS_Store
 npm-debug.log*
-
-.vercel
-.env*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
