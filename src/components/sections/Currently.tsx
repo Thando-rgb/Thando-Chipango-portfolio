@@ -16,20 +16,16 @@ const Currently: React.FC<{ onContact: () => void }> = ({ onContact }) => {
         <div className="currently-art">
           <div className="currently-data-panel">
             <div className="currently-data-row">
-              <span className="mono">RECORDS CLEANED</span>
-              <span className="mono">66,000+</span>
+              <span className="mono">RECORDS CLEANED:</span> <span className="mono">66,000+</span>
             </div>
             <div className="currently-data-row">
-              <span className="mono">REVIEWS CLASSIFIED</span>
-              <span className="mono">15,960</span>
+              <span className="mono">REVIEWS CLASSIFIED:</span> <span className="mono">15,960</span>
             </div>
             <div className="currently-data-row">
-              <span className="mono">BEST MODEL</span>
-              <span className="mono">Logistic Regression (85.3%)</span>
+              <span className="mono">BEST MODEL:</span> <span className="mono">Logistic Regression (85.3%)</span>
             </div>
             <div className="currently-data-row">
-              <span className="mono">STACK</span>
-              <span className="mono">Python, pandas, NLTK, scikit-learn, SQLite</span>
+              <span className="mono">STACK:</span> <span className="mono">Python, pandas, NLTK, scikit-learn, SQLite</span>
             </div>
           </div>
           <span className="map-caption mono">SENTIMENT ANALYSIS / DATA SCIENCE</span>
