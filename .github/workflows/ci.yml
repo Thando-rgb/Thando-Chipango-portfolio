@@ -22,12 +22,14 @@ jobs:
       - name: Build and run Lighthouse CI
         run: |
           npm run build
-          npm run dev &
-          DEV_PID=$!
-          sleep 5
+          npx serve dist -l 5173 &
+          SERVE_PID=$!
+          sleep 3
           npx lhci autorun --config=lighthouserc.json
           LHCI_EXIT=$?
-          kill $DEV_PID
+          kill $SERVE_PID 2>/dev/null || true
+          pkill -f "serve dist" 2>/dev/null || true
+          sleep 2
           exit $LHCI_EXIT
       - name: E2E tests (Playwright)
         run: |
