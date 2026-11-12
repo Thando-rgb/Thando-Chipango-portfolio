@@ -33,4 +33,5 @@ jobs:
           exit $LHCI_EXIT
       - name: E2E tests (Playwright)
         run: |
+          npx playwright install chromium
           npx playwright test
