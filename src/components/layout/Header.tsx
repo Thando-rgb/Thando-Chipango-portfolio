@@ -79,7 +79,7 @@ const Header: React.FC<{ onContact: () => void }> = ({ onContact }) => {
       </div>
       <AnimatePresence>
         {menuOpen && (
-          <m.nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation" layout initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }}>
+          <m.nav id="mobile-navigation" className="mobile-nav" aria-label="Mobile navigation" initial={{ maxHeight: 0, opacity: 0 }} animate={{ maxHeight: 500, opacity: 1 }} exit={{ maxHeight: 0, opacity: 0 }}>
             <div>
               {navigation.map((item, index) => (
                 <a key={item.id} href={`#${item.id}`} onClick={() => setMenuOpen(false)}>

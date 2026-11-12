@@ -72,9 +72,9 @@ main:focus { outline: none; }
 .header-actions { display: flex; align-items: center; gap: 20px; }
 .header-contact { display: flex; align-items: center; gap: 24px; padding: 12px 18px; border: 1px solid #aeb4a5; border-radius: 4px; font-size: 11px; font-weight: 600; transition: background .25s; }
 .header-contact:hover { background: #e7eadd; }
-.menu-toggle { display: none; align-items: center; justify-content: center; padding: 8px; }
+.menu-toggle { display: none; align-items: center; justify-content: center; padding: 8px; min-width: 44px; min-height: 44px; }
 .menu-toggle:hover { color: var(--green); }
-.mobile-nav { position: absolute; top: 76px; left: 0; right: 0; background: var(--paper); max-height: calc(100dvh - 76px); overflow-x: hidden; overflow-y: auto; box-shadow: 0 15px 20px #20271d0a; }
+.mobile-nav { position: absolute; top: 76px; left: 0; right: 0; background: var(--paper); max-height: calc(100dvh - 76px); overflow: hidden; box-shadow: 0 15px 20px #20271d0a; }
 .mobile-nav > div { padding: 22px 25px 30px; }
 .mobile-nav a { display: flex; align-items: center; gap: 20px; padding: 17px 0; border-bottom: 1px solid var(--line); font-size: 27px; letter-spacing: -1px; }
 .mobile-nav a > .mono { font-size: 10px; color: var(--green); letter-spacing: 0; }

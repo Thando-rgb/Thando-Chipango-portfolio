@@ -1,4 +1,4 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import { render, screen, fireEvent, within } from '@testing-library/react'
 import { describe, expect, it, vi } from 'vitest'
 import Header from './Header'
 
@@ -27,5 +27,32 @@ describe('Header', () => {
   it('renders the menu toggle button', () => {
     render(<Header onContact={vi.fn()} />)
     expect(screen.getByRole('button', { name: /open navigation/i })).toBeInTheDocument()
+  })
+
+  it('toggles menu open state on click', () => {
+    render(<Header onContact={vi.fn()} />)
+    const menuToggle = screen.getByRole('button', { name: /open navigation/i })
+    expect(menuToggle).toHaveAttribute('aria-expanded', 'false')
+
+    fireEvent.click(menuToggle)
+    expect(menuToggle).toHaveAttribute('aria-expanded', 'true')
+    expect(menuToggle).toHaveAccessibleName('Close navigation')
+
+    fireEvent.click(menuToggle)
+    expect(menuToggle).toHaveAttribute('aria-expanded', 'false')
+    expect(menuToggle).toHaveAccessibleName('Open navigation')
+  })
+
+  it('renders mobile navigation when menu is open', () => {
+    render(<Header onContact={vi.fn()} />)
+    const menuToggle = screen.getByRole('button', { name: /open navigation/i })
+    fireEvent.click(menuToggle)
+
+    const mobileNav = screen.getByRole('navigation', { name: 'Mobile navigation' })
+    expect(mobileNav).toBeInTheDocument()
+    expect(within(mobileNav).getByRole('link', { name: /work/i })).toBeInTheDocument()
+    expect(within(mobileNav).getByRole('link', { name: /about/i })).toBeInTheDocument()
+    expect(within(mobileNav).getByRole('link', { name: /experience/i })).toBeInTheDocument()
+    expect(within(mobileNav).getByRole('link', { name: /contact/i })).toBeInTheDocument()
   })
 })
