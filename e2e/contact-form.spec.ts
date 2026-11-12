@@ -12,8 +12,8 @@ test.describe('Contact form', () => {
   test('requires a message of at least ten characters', async ({ page }) => {
     await page.goto('/')
     await page.getByRole('button', { name: /start a conversation/i }).click()
-    await page.getByLabelText('Your name').fill('Alex')
-    await page.getByLabelText('A little about it').fill('too short')
+    await page.getByLabel('Your name').fill('Alex')
+    await page.getByLabel('A little about it').fill('too short')
     await page.getByRole('form').dispatchEvent('submit')
     await expect(page.getByRole('alert').first()).toContainText(/at least 10 characters/i)
   })
@@ -21,9 +21,9 @@ test.describe('Contact form', () => {
   test('rejects a malformed optional email', async ({ page }) => {
     await page.goto('/')
     await page.getByRole('button', { name: /start a conversation/i }).click()
-    await page.getByLabelText('Your name').fill('Alex Smith')
-    await page.getByLabelText('A little about it').fill('I would love to work together on a project.')
-    await page.getByLabelText('Your email').fill('not-an-email')
+    await page.getByLabel('Your name').fill('Alex Smith')
+    await page.getByLabel('A little about it').fill('I would love to work together on a project.')
+    await page.getByLabel('Your email').fill('not-an-email')
     await page.getByRole('form').dispatchEvent('submit')
     await expect(page.getByRole('alert').first()).toContainText(/valid email address/i)
   })
