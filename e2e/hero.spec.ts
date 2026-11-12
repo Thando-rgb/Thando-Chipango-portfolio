@@ -6,7 +6,7 @@ test.describe('Hero section', () => {
 
     await expect(page.getByRole('heading', { name: 'Thando Chipango' })).toBeVisible()
     await expect(page.getByRole('heading', { name: /thoughtful code/i })).toBeVisible()
-    await expect(page.getByRole('link', { name: /download cv/i })).toHaveAttribute('href', '/resume.pdf')
+    await expect(page.locator('.hero-cta').getByRole('link', { name: /download cv/i })).toHaveAttribute('href', '/resume.pdf')
     await expect(page.getByRole('link', { name: /scroll to selected work/i })).toHaveAttribute('href', '#work')
   })
 

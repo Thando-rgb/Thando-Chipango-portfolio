@@ -15,7 +15,7 @@ test.describe('Contact form', () => {
     await page.getByLabelText('Your name').fill('Alex')
     await page.getByLabelText('A little about it').fill('too short')
     await page.getByRole('form').dispatchEvent('submit')
-    await expect(page.getByRole('alert')).toContainText(/at least 10 characters/i)
+    await expect(page.getByRole('alert').first()).toContainText(/at least 10 characters/i)
   })
 
   test('rejects a malformed optional email', async ({ page }) => {
@@ -25,6 +25,6 @@ test.describe('Contact form', () => {
     await page.getByLabelText('A little about it').fill('I would love to work together on a project.')
     await page.getByLabelText('Your email').fill('not-an-email')
     await page.getByRole('form').dispatchEvent('submit')
-    await expect(page.getByRole('alert')).toContainText(/valid email address/i)
+    await expect(page.getByRole('alert').first()).toContainText(/valid email address/i)
   })
 })

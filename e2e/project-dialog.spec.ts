@@ -5,7 +5,7 @@ test.describe('Project dialog', () => {
     await page.goto('/')
     await page.getByRole('button', { name: 'Explore Network Intrusion Detection' }).click()
     await expect(page.getByRole('dialog')).toBeVisible()
-    await expect(page.getByRole('heading', { name: /network intrusion detection/i })).toBeVisible()
+    await expect(page.getByRole('dialog').getByRole('heading', { name: /network intrusion detection/i })).toBeVisible()
     await page.getByRole('button', { name: /next project/i }).click()
     await page.getByRole('button', { name: /previous project/i }).click()
     await page.keyboard.press('Escape')

@@ -4,7 +4,7 @@ test.describe('CV download', () => {
   test('Download CV link points to resume.pdf', async ({ page }) => {
     await page.goto('/')
 
-    const cvLink = page.getByRole('link', { name: /download cv/i })
+    const cvLink = page.locator('.hero-cta').getByRole('link', { name: /download cv/i })
     await expect(cvLink).toHaveAttribute('href', '/resume.pdf')
 
     const response = await page.request.get('/resume.pdf')
